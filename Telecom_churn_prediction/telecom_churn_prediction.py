@@ -34,7 +34,9 @@ import matplotlib.pyplot as plt
 
 plt.plot([int(i) for i in list(knn_neighbor_graph.keys())], list(knn_neighbor_graph.values()))
 plt.xlim(1, 40)
+plt.title("KNN Neighbor Classifier")
 plt.show()
+
 # from analysis it is found that k=29 is the best value for prediction
 knn = KNeighborsClassifier(n_neighbors=29)
 knn.fit(X_train, Y_train)
